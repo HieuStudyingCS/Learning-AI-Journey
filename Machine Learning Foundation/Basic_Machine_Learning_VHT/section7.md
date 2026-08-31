@@ -17,6 +17,7 @@ dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan 
 Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \tag{7.2}$$
+
 ---
 
 ### 2.2. Sai số dự đoán
@@ -43,12 +44,12 @@ $$\mathbf{w}^{*} = \argmin_{\mathbf{w}} \mathcal{L(\mathbf{w})} \tag{7.5}$$
 > Trong machine learning, hàm mất mát thường là trung bình cộng của sai số tại mỗi điểm. Về mặt toán học, hệ số $\frac{1}{2N}$ không ảnh hưởng tới nghiệm của bài toán. Tuy nhiên, việc lấy trung bình này quan trọng vì số lượng điểm dữ liệu trong tập huấn luyện có thể thay đổi. Việc tính toán mất mát trên từng điểm dữ liệu sẽ hữu ích hơn trong việc đánh giá chất lượng mô hình. Ngoài ra, việc lấy trung bình cũng giúp tránh hiện tượng tràn số khi số lượng điểm dữ liệu lớn.
 
 
-Trước khi xây dựng nghiệm cho bài toán tối ưu hàm mất mát, ta thấy rằng hàm
-số này có thể được viết gọn lại dưới dạng ma trận, vector, và norm như sau:
+Trước khi xây dựng nghiệm cho bài toán tối ưu hàm mất mát, ta thấy rằng hàm số này có thể được viết gọn lại dưới dạng ma trận, vector, và norm như sau:
 
 $$\mathcal{L(\mathbf{w})} = \frac{1}{2N}\sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 - \mathbf{x_1}^{T}\mathbf{w} \\ y_2 - \mathbf{x_2}^{T}\mathbf{w} \\ ... \\ y_N - \mathbf{x_N}^{T}\mathbf{w}\end{bmatrix} \right\|_2 ^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix} - \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \mathbf{w}\right\|_2^{2} = \frac{1}{2N} \left \| \mathbf{y} - \mathbf{X}^{T}\mathbf{w} \right \|_2^{2}$$
 
 Trong đó:
+
 $$\mathbf{X}^{T} = \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \Rightarrow \mathbf{X} = \begin{bmatrix} \mathbf{x_1} & \mathbf{x_2} & ... & \mathbf{x_N}\end{bmatrix}$$
 
 $$\mathbf{y} = \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix}$$
