@@ -19,9 +19,8 @@ Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vec
 $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$
-y = w_1x_1 + w_2x_2 + ... + w_dx_d =   \mathbf{x}^{T}\mathbf{w} \tag{7.2}
+y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \tag{7.2}
 $$
-
 ---
 
 ### 2.2. Sai số dự đoán
@@ -62,11 +61,11 @@ $$
 $$
 
 Trong đó:
-- $$
+$$
     \mathbf{X}^{T} = \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \Rightarrow \mathbf{X} = \begin{bmatrix} \mathbf{x_1} & \mathbf{x_2} & ... & \mathbf{x_N}\end{bmatrix}
 $$
 
-- $$
+$$
     \mathbf{y} = \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix}
 $$
 
