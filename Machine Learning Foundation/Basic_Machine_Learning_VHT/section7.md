@@ -45,7 +45,7 @@ Hàm số $\mathcal{L(w)}$ chính là hàm mất mát của mô hình hồi quy 
 bằng cách tối thiểu hàm mất mát theo $w$:
 
 $$
-\mathbf{w}^{*} = \operatorname*{argmin}_{\mathbf{w}} \mathcal{L}(\mathbf{w}) \qquad (7.5)
+\mathbf{w}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{w}} \mathcal{L}(\mathbf{w}) \qquad (7.5)
 $$
 
 > [!NOTE]
@@ -61,11 +61,11 @@ $$
 Trong đó:
 
 $$
-\mathbf{X}^{T} = \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \Rightarrow \mathbf{X} = \begin{bmatrix} \mathbf{x_1} & \mathbf{x_2} & ... & \mathbf{x_N}\end{bmatrix}
+\mathbf{X}^{T} = \begin{bmatrix} \mathbf{x_1}^{T} \\\\ \mathbf{x_2}^{T} \\\\ ... \\\\ \mathbf{x_N}^{T}\end{bmatrix} \Rightarrow \mathbf{X} = \begin{bmatrix} \mathbf{x_1} & \mathbf{x_2} & ... & \mathbf{x_N}\end{bmatrix}
 $$
 
 $$
-\mathbf{y} = \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix}
+\mathbf{y} = \begin{bmatrix} y_1 \\\\ y_2 \\\\ ... \\\\ y_N\end{bmatrix}
 $$
 
 
