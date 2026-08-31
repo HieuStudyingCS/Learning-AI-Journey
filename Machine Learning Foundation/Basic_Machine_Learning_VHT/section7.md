@@ -42,6 +42,10 @@ $$
 \mathcal{L(\mathbf{w})} = \frac{1}{2N} \sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w}) \tag{7.4}
 $$
 
+$$
+\frac{1}{2} e^2 = \frac{1}{2} (y - \hat{y})^2 = \frac{1}{2} (y - \mathbf{x}^T \mathbf{w})^2 \tag{7.3}
+$$
+
 Hàm số $\mathcal{L(w)}$ chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số $θ = w$. Ta luôn mong muốn sự mất mát là nhỏ nhất, điều này có thể đạt được
 bằng cách tối thiểu hàm mất mát theo $w$:
 
