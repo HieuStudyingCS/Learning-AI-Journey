@@ -7,16 +7,14 @@
 
 Bài toán trên đây là bài toán dự đoán giá trị của đầu ra dựa trên vector đặc
 trưng đầu vào. Ngoài ra, giá trị của đầu ra có thể nhận rất nhiều giá trị thực
-dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan hệ $\hat{y} = \mathbf{x}^T \mathbf{w}$ là
-một mối quan hệ tuyến tính. Tên gọi hồi quy tuyến tính xuất phát từ đây.
+dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan hệ $\hat{y} = \mathbf{x}^T \mathbf{w}$ là một mối quan hệ tuyến tính. Tên gọi hồi quy tuyến tính xuất phát từ đây.
 
 ---
 
 ## 2. Loss Function: Xây dựng và Tối ưu hóa
 ### 2.1. Định nghĩa
 
-Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều
-$\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
+Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \tag{7.2}$$
 ---

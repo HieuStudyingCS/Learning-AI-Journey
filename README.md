@@ -21,8 +21,8 @@ With strong interest in AI, I decided to create this repository to save all of n
 <details>
     <summary>X sections</summary>
     | Section | Contents |
-    |:-------:|:---------|
-    | Hello| Hello
+    |:-------:|:--------:|
+    | 7. Hồi Quy Tuyến Tính | Đây là một trong các thuật toán Machine Learning cơ bản nhất, sử dụng một đường thẳng để "sắp xỉ tốt" các điểm dữ liệu |
 </details>
 
 <sub>[↑ Back to navigation](#quick-navigation)</sub>
