@@ -42,10 +42,6 @@ $$
 \mathcal{L(\mathbf{w})} = \frac{1}{2N} \sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w}) \tag{7.4}
 $$
 
-$$
-\frac{1}{2} e^2 = \frac{1}{2} (y - \hat{y})^2 = \frac{1}{2} (y - \mathbf{x}^T \mathbf{w})^2 \tag{7.3}
-$$
-
 Hàm số $\mathcal{L(w)}$ chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số $θ = w$. Ta luôn mong muốn sự mất mát là nhỏ nhất, điều này có thể đạt được
 bằng cách tối thiểu hàm mất mát theo $w$:
 
@@ -61,7 +57,7 @@ Trước khi xây dựng nghiệm cho bài toán tối ưu hàm mất mát, ta t
 số này có thể được viết gọn lại dưới dạng ma trận, vector, và norm như sau:
 
 $$
-\mathcal{L(\mathbf{w})} = \frac{1}{2N}\sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 - \mathbf{x_1}^{T}\mathbf{w} \\ y_2 - \mathbf{x_2}^{T}\mathbf{w} \\ ... \\ y_N - \mathbf{x_N}^{T}\mathbf{w}\end{bmatrix} \right\|_2 ^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix} - \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \mathbf{w}\right\|_2^{2} = \frac{1}{2N} \left \| \mathbf{y} - \mathbf{X}^{T}\mathbf{w} \right \|_2^{2}
+    \mathcal{L(\mathbf{w})} = \frac{1}{2N}\sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 - \mathbf{x_1}^{T}\mathbf{w} \\ y_2 - \mathbf{x_2}^{T}\mathbf{w} \\ ... \\ y_N - \mathbf{x_N}^{T}\mathbf{w}\end{bmatrix} \right\|_2 ^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 \\ y_2 \\ ... \\ y_N\end{bmatrix} - \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ ... \\ \mathbf{x_N}^{T}\end{bmatrix} \mathbf{w}\right\|_2^{2} = \frac{1}{2N} \left \| \mathbf{y} - \mathbf{X}^{T}\mathbf{w} \right \|_2^{2}
 $$
 
 Trong đó:

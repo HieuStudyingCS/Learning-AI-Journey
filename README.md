@@ -6,7 +6,7 @@ With strong interest in AI, I decided to create this repository to save all of n
 ## Quick Navigation 
 | Group | Notebooks |
 |:-----:|:---------:|
-| [Machine Learning Foundation](#machine-learning-foundation) | [Pattern Recognition and Machine Learning C.Bishop](#pattern-recognition-and-machine-learning-cbishop) <br> Basic Machine Learning with Vu Huu Tiep|
+| [Machine Learning Foundation](#machine-learning-foundation) | [Pattern Recognition and Machine Learning C.Bishop](#pattern-recognition-and-machine-learning-cbishop) <br> [Basic Machine Learning with Vu Huu Tiep](#basic-machine-learning-vu-huu-tiep)|
 
 
 ## Machine Learning Foundation 
