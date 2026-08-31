@@ -17,7 +17,7 @@ dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan 
 Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$
-y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \tag{7.2}
+y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w}
 $$
 
 ---
@@ -28,7 +28,7 @@ Sau khi xây dựng được mô hình dự đoán đầu ra như (7.2), ta cầ
 sai khác e giữa đầu ra thực sự $y$ và đầu ra dự đoán $\hat{y}$ là nhỏ nhất:
 
 $$
-\frac{1}{2} e^{2} = \frac{1}{2}(y - \hat{y})^{2} = \frac{1}{2}(y - \mathbf{x}^{T}\mathbf{w})^{2} \tag{7.3}
+\frac{1}{2} e^{2} = \frac{1}{2}(y - \hat{y})^{2} = \frac{1}{2}(y - \mathbf{x}^{T}\mathbf{w})^{2}
 $$
 
 Ở đây, bình phương được lấy vì $e = y − \hat{y}$ có thể là **một số âm**. Việc sai số là nhỏ nhất có thể được mô tả bằng cách lấy trị tuyệt đối $|e| = |y − \hat{y}|$. Tuy nhiên, cách làm này ít được sử dụng vì hàm trị tuyệt đối không khả vi tại gốc toạ độ, không thuận tiện cho việc tối ưu (thường là sử dụng Gradient). Hệ số $\frac{1}{2}$ sẽ bị triệt tiêu khi lấy đạo hàm của $e$ theo tham số mô hình $\mathbf{w}$.
@@ -38,14 +38,14 @@ $$
 Điều tương tự xảy ra với tất cả các cặp dữ liệu $(x_i, y_i), i = 1, 2, . . . , N$, với $N$ là số lượng dữ liệu trong tập huấn luyện. Việc tìm mô hình tốt nhất tương đương với việc tìm $w$ để hàm số sau đạt giá trị nhỏ nhất:
 
 $$
-\mathcal{L(\mathbf{w})} = \frac{1}{2N} \sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w}) \tag{7.4}
+\mathcal{L(\mathbf{w})} = \frac{1}{2N} \sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})
 $$
 
 Hàm số $\mathcal{L(w)}$ chính là hàm mất mát của mô hình hồi quy tuyến tính với tham số $θ = w$. Ta luôn mong muốn sự mất mát là nhỏ nhất, điều này có thể đạt được
 bằng cách tối thiểu hàm mất mát theo $w$:
 
 $$
-\mathbf{w}^{*} = \argmin_{\mathbf{w}} \mathcal{L(\mathbf{w})} \tag{7.5}
+\mathbf{w}^{*} = \argmin_{\mathbf{w}} \mathcal{L(\mathbf{w})}
 $$
 
 > [!NOTE]
