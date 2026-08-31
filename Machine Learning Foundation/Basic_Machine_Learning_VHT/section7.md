@@ -17,7 +17,9 @@ dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan 
 Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$
-y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w}
+\begin{aligned}
+y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \tag{7.2}
+\end{aligned}
 $$
 
 ---
@@ -28,7 +30,9 @@ Sau khi xây dựng được mô hình dự đoán đầu ra như (7.2), ta cầ
 sai khác e giữa đầu ra thực sự $y$ và đầu ra dự đoán $\hat{y}$ là nhỏ nhất:
 
 $$
-\frac{1}{2} e^{2} = \frac{1}{2}(y - \hat{y})^{2} = \frac{1}{2}(y - \mathbf{x}^{T}\mathbf{w})^{2}
+\begin{aligned}
+\frac{1}{2} e^{2} = \frac{1}{2}(y - \hat{y})^{2} = \frac{1}{2}(y - \mathbf{x}^{T}\mathbf{w})^{2} \tag{7.3}
+\end{aligned}
 $$
 
 Ở đây, bình phương được lấy vì $e = y − \hat{y}$ có thể là **một số âm**. Việc sai số là nhỏ nhất có thể được mô tả bằng cách lấy trị tuyệt đối $|e| = |y − \hat{y}|$. Tuy nhiên, cách làm này ít được sử dụng vì hàm trị tuyệt đối không khả vi tại gốc toạ độ, không thuận tiện cho việc tối ưu (thường là sử dụng Gradient). Hệ số $\frac{1}{2}$ sẽ bị triệt tiêu khi lấy đạo hàm của $e$ theo tham số mô hình $\mathbf{w}$.
