@@ -146,5 +146,5 @@ Giả sử lập trình một hệ thống kiểm duyệt chất lượng táo t
 
 # Reference
 
-[1]: Foundation of Machine Learning - Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar - Section 2: The PAC Learning Framework.
+[1]: Foundation of Machine Learning - Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar - Section 2: The PAC Learning Framework.  
 [2]: [Hoeffding's Inequality](https://web.eecs.umich.edu/~cscott/past_courses/eecs598w14/notes/03_hoeffding.pdf)
