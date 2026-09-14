@@ -6,7 +6,7 @@ With strong interest in AI, I decided to create this repository to save all of n
 ## Quick Navigation 
 | Group | Notebooks |
 |:-----:|:---------:|
-| [Machine Learning Foundation](#machine-learning-foundation) | [Pattern Recognition and Machine Learning C.Bishop](#pattern-recognition-and-machine-learning-cbishop) <br> [Basic Machine Learning with Vu Huu Tiep](#basic-machine-learning-vu-huu-tiep)|
+| [Machine Learning Foundation](#machine-learning-foundation) | [Pattern Recognition and Machine Learning C.Bishop](#pattern-recognition-and-machine-learning-cbishop) <br> [Basic Machine Learning with Vu Huu Tiep](#basic-machine-learning-vu-huu-tiep) <br> [Foundation of Machine Learning - Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar](#foundation-of-machine-learning)|
 
 
 ## Machine Learning Foundation 
@@ -26,6 +26,9 @@ With strong interest in AI, I decided to create this repository to save all of n
     | 7. Hồi Quy Tuyến Tính | Đây là một trong các thuật toán Machine Learning cơ bản nhất, sử dụng một đường thẳng để "sắp xỉ tốt" các điểm dữ liệu |
     
 </details>
+
+### Foundation of Machine Learning - Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar
+- Nguồn tham khảo chính cho bài viết về Hoeffding và PAC Learning Model.
 
 <sub>[↑ Back to navigation](#quick-navigation)</sub>
 
