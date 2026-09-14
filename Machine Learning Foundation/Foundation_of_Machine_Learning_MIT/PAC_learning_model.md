@@ -40,7 +40,7 @@ Cách nói $\mathcal{H}$ còn có thể được hiểu là toàn bộ những t
 Nhớ lại một chút trong page về hoeffding’s inequality có nhắc về $Err_{real}(f_\theta)$ như sau:
 
 $$
-Err_{real} = E[z_i] = p = P(f_\theta(x) \neq y) \tag{1}
+Err_{real} = E[z_i] = p = P(f_\theta(x) \neq y) \qquad(1)
 $$
 
 Trong đó $p$ là xác suất mà mô hình dự đoán sai tại một điểm dữ liệu trong thực tế, $z_i$ là một biến ngẫu nhiên ta định nghĩa như sau
