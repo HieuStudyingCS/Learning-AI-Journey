@@ -5,7 +5,7 @@ Khi xây dựng mô hình học máy, ta mong muốn sai số của mô hình v�
 Vì vậy ta hình thành công thức [4]:
 
 $$
-P[|Err_{test}(f_\theta) - Err_{real}(f_\theta)| > \epsilon] \leq 2 \exp(-2\epsilon^{2}N_{test}) \tag{1}
+P[|Err_{test}(f_\theta) - Err_{real}(f_\theta)| > \epsilon] \leq 2 \exp(-2\epsilon^{2}N_{test}) \qquad(1)
 $$
 
 - Breakdown công thức một chút:
@@ -30,7 +30,7 @@ Dễ thấy các biến $z_i$ là i.i.d và $z_i \in \{0, 1\}$.
 Gọi $p$ là xác suất mô hình đưa ra dự đoán sai trên điểm dữ liệu $(x, y)$ bất kỳ trên thực tế.
 
 $$
-Err_{real} (f_\theta) = P(f_\theta(x) \neq y) = p \tag{2}
+Err_{real} (f_\theta) = P(f_\theta(x) \neq y) = p \qquad(2)
 $$
 
 (Lý do ta dùng lại $p$ trong công thức tính $\mathbb{E}[z_i]$ sẽ được nêu sau thông qua ví dụ Bin Model).
@@ -51,13 +51,13 @@ Source: [Hoeffding's Inequality](https://web.eecs.umich.edu/~cscott/past_courses
 Ta thấy nếu đặt các biến ngẫu nhiên độc lập $Z_i = z_i = \mathbb{I}[f_\theta(x_i) \neq y_i]$ với $i = 1, 2, \dots, N$ cùng nhận giá trị bị chặn trong khoảng $[0, 1]$, thì với trung bình mẫu $\bar{Z} = \frac{1}{N}\sum_{i=1}^{N}Z_i$ và kỳ vọng $\mu = \mathbb{E}[\bar{Z}] = \mathbb{E}[z_i] = p = Err_{real}[f_\theta]$, ta luôn có bất đẳng thức Hoeffding như sau:
 
 $$
-P[|\bar{Z} - \mu| > \epsilon] \leq 2\exp(-\frac{2N_{test}\epsilon^2}{(b-a)^{2}}) \tag{3}
+P[|\bar{Z} - \mu| > \epsilon] \leq 2\exp(-\frac{2N_{test}\epsilon^2}{(b-a)^{2}}) \qquad(3)
 $$
 
 Trong đó, $a = 0$ và $b = 1$, vậy thì $(a-b)^{2} = (0-1)^{2} = 1$, dẫn đến (3) tương đương
 
 $$
-P[|\bar{Z} - \mu| > \epsilon] \leq 2\exp(-\frac{2N_{test}\epsilon^2}{(b-a)^{2}}) = 2\exp(-2N_{test}\epsilon^2) \tag{4}
+P[|\bar{Z} - \mu| > \epsilon] \leq 2\exp(-\frac{2N_{test}\epsilon^2}{(b-a)^{2}}) = 2\exp(-2N_{test}\epsilon^2) \qquad(4)
 $$
 
 Trung bình số lần sai số đoán sai tập test hay $\bar{Z} = \frac{1}{N}\sum_{i=1}^{N}Z_i$ sẽ là sai số kiểm tra trên tập test ($Err_{test}$), nói cách khác:
@@ -69,7 +69,7 @@ $$
 Kết hợp với $\mu = Err_{real}[f_\theta]$, và thay lên (4) ta được:
 
 $$
-P[|Err_{test}(f_\theta) - Err_{real}(f_\theta)| > \epsilon] \leq 2\exp(-2N_{test}\epsilon^2) \tag{5}
+P[|Err_{test}(f_\theta) - Err_{real}(f_\theta)| > \epsilon] \leq 2\exp(-2N_{test}\epsilon^2) \qquad(5)
 $$
 
 Hoàn tất chứng minh.
