@@ -7,17 +7,17 @@
 
 Bài toán trên đây là bài toán dự đoán giá trị của đầu ra dựa trên vector đặc
 trưng đầu vào. Ngoài ra, giá trị của đầu ra có thể nhận rất nhiều giá trị thực
-dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan hệ $\hat{y} = \boldsymbol{x}^T \boldsymbol{w}$ là một mối quan hệ tuyến tính. Tên gọi hồi quy tuyến tính xuất phát từ đây.
+dương khác nhau. Vì vậy, đây là một bài toán hồi quy. Mối quan hệ $\hat{y} = \mathbf{x}^T \mathbf{w}$ là một mối quan hệ tuyến tính. Tên gọi hồi quy tuyến tính xuất phát từ đây.
 
 ---
 
 ## 2. Loss Function: Xây dựng và Tối ưu hóa
 ### 2.1. Định nghĩa
 
-Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\boldsymbol{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
+Tổng quát, nếu mỗi điểm dữ liệu được mô tả bởi một *vector đặc trưng* $d$ chiều $\mathbf{x} \in \mathbb{R}^{d}$, hàm dự đoán đầu ra được viết dưới dạng:
 
 $$
-y = w_1x_1 + w_2x_2 + ... + w_dx_d = \boldsymbol{x}^{T}\boldsymbol{w} \qquad (7.2)
+y = w_1x_1 + w_2x_2 + ... + w_dx_d = \mathbf{x}^{T}\mathbf{w} \qquad (7.2)
 $$
 
 ---
@@ -47,7 +47,6 @@ bằng cách tối thiểu hàm mất mát theo $w$:
 $$
 \mathbf{w}^{*} = \mathop{\mathrm{argmin}}_{\mathbf{w}} \mathcal{L}(\mathbf{w}) \qquad (7.5)
 $$
-
 > [!NOTE]
 > Trong machine learning, hàm mất mát thường là trung bình cộng của sai số tại mỗi điểm. Về mặt toán học, hệ số $\frac{1}{2N}$ không ảnh hưởng tới nghiệm của bài toán. Tuy nhiên, việc lấy trung bình này quan trọng vì số lượng điểm dữ liệu trong tập huấn luyện có thể thay đổi. Việc tính toán mất mát trên từng điểm dữ liệu sẽ hữu ích hơn trong việc đánh giá chất lượng mô hình. Ngoài ra, việc lấy trung bình cũng giúp tránh hiện tượng tràn số khi số lượng điểm dữ liệu lớn.
 
@@ -55,7 +54,7 @@ $$
 Trước khi xây dựng nghiệm cho bài toán tối ưu hàm mất mát, ta thấy rằng hàm số này có thể được viết gọn lại dưới dạng ma trận, vector, và norm như sau:
 
 $$
-\mathcal{L(\mathbf{w})} = \frac{1}{2N}\sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 - \mathbf{x_1}^{T}\mathbf{w} \\\\ y_2 - \mathbf{x_2}^{T}\mathbf{w} \\\\ ... \\\\ y_N - \mathbf{x_N}^{T}\mathbf{w}\end{bmatrix} \right\|_2 ^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 \\\\ y_2 \\\\ ... \\\\ y_N\end{bmatrix} - \begin{bmatrix} \mathbf{x_1}^{T} \\\\ \mathbf{x_2}^{T} \\\\ ... \\\\ \mathbf{x_N}^{T}\end{bmatrix} \mathbf{w}\right\|_2^{2} = \frac{1}{2N} \left \| \mathbf{y} - \mathbf{X}^{T}\mathbf{w} \right \|_2^{2}
+\mathcal{L}(\mathbf{w}) = \frac{1}{2N}\sum_{i=1}^{N}(y_i - \mathbf{x_i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 - \mathbf{x_1}^{T}\mathbf{w} \\ y_2 - \mathbf{x_2}^{T}\mathbf{w} \\ \vdots \\ y_N - \mathbf{x_N}^{T}\mathbf{w}\end{bmatrix} \right\|_2 ^{2} = \frac{1}{2N} \left\| \begin{bmatrix} y_1 \\ y_2 \\ \vdots \\ y_N\end{bmatrix} - \begin{bmatrix} \mathbf{x_1}^{T} \\ \mathbf{x_2}^{T} \\ \vdots \\ \mathbf{x_N}^{T}\end{bmatrix} \mathbf{w}\right\|_2^{2} = \frac{1}{2N} \left \| \mathbf{y} - \mathbf{X}^{T}\mathbf{w} \right \|_2^{2}
 $$
 
 Trong đó:
