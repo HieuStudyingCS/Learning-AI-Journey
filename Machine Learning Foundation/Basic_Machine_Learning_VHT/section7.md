@@ -67,6 +67,3 @@ $$
 \mathbf{y} = \begin{bmatrix} y_1 \\\\ y_2 \\\\ ... \\\\ y_N\end{bmatrix}
 $$
 
-
-$\left\| x \right\|_2$
-
