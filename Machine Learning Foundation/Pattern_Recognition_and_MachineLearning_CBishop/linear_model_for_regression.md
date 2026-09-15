@@ -29,10 +29,10 @@ $$
 
 Trong đó,
 
-- $\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$ .
-- $x_i$ là đặc trưng thứ $i$.
-- $\mathbf{w} =  \begin{bmatrix}w_1 & w_2 & \dots & w_d\end{bmatrix}^{T} \in \mathcal{R}^{d}$
-- Thông thường ta có thêm hệ số tự do là $w_0$ (thường được gọi là bias) để điều chỉnh thuật toán tốt hơn và fit với dữ liệu nhiều hơn, từ đó sinh ra cách kí hiệu mới như sau:
+$\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$.  
+$x_i$ là đặc trưng thứ $i$.
+$\mathbf{w} =  \begin{bmatrix}w_1 & w_2 & \dots & w_d\end{bmatrix}^{T} \in \mathcal{R}^{d}$  
+Thông thường ta có thêm hệ số tự do là $w_0$ (thường được gọi là bias) để điều chỉnh thuật toán tốt hơn và fit với dữ liệu nhiều hơn, từ đó sinh ra cách kí hiệu mới như sau:
     - $\mathbf{\bar{x}} = \begin{bmatrix}1 & x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}$
     - $\mathbf{\bar{w}} =  \begin{bmatrix}w_0 & w_1 & w_2 & \dots & w_d\end{bmatrix}^{T}$
 
@@ -209,16 +209,16 @@ Rõ ràng:
 - Ý nghĩa từ công thức: phương sai của nhiễu bằng đúng trung bình bình phương sai số (MSE) của tập huấn luyện sau khi đã tối ưu trọng số. Hay nói cách khác thì phương sai của nhiễu đúng bằng trung bình bình phương phần dư (residual) theo góc nhìn giải tích, nhưng nhìn theo góc nhìn thống kê sẽ thấy nó chính là sample variance của $\varepsilon$. Giải thích:
     - Rất dễ thấy rằng $t = y(\mathbf{x}, \mathbf{w})   + \varepsilon$ là một random variable, và do vậy tương ứng với mỗi $t$ ta có một phần noise mà ta assume phân phối như sau:
         
-    $$
-    \varepsilon \sim \mathcal{N}(0, \beta^{-1})
-    $$
+$$
+\varepsilon \sim \mathcal{N}(0, \beta^{-1})
+$$
         
     - Dẫn đến với $N$ giá trị đích $t$ ta có tới $N$ noise là $\varepsilon_1, \dots, \varepsilon_N$ đều i.i.d (independent identically distribution) vì các dữ liệu trong tập dữ liệu ban đầu được thu thập một cách độc lập.
     - Vì vậy ta thấy:
         
-    $$
-    Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
-    $$
+$$
+Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
+$$
         
         - Dấu bằng cuối cùng chỉ xảy ra theo luật số lớn khi số lượng quan sát được $N$ càng lớn. Vì vậy trung bình của $\varepsilon_i^{2}$ có thể được coi như là một giá trị thực nghiệm ước lượng $E[\varepsilon^{2}]$ (hay trong trường hợp này trung bình này cũng chính là phương sai/mức độ biến động của $\varepsilon$).
     - Mà ta lại có
