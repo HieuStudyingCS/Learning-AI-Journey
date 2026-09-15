@@ -61,7 +61,7 @@ $$
 
 $$
 \mathbf{\bar{X}} = \begin{bmatrix}\mathbf{\bar{x_1}^{T}} \\ \mathbf{\bar{x_2}}^{T} \\\dots\\ \mathbf{\bar{x_N}}^{T}\end{bmatrix}
-$$ .  
+$$    
 
 - Rõ ràng, sai số càng nhỏ thì chứng tỏ model hoạt động càng tốt, vậy loss function cần phải càng nhỏ càng tốt → Tối thiểu hóa Loss function $\mathcal{L}$.
 
