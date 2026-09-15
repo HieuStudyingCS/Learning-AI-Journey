@@ -29,13 +29,16 @@ $$
 
 Trong đó,
 
-$\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$.    
+$\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$ .    
+
 $x_i$ là đặc trưng thứ $i$.  
+
 $\mathbf{w} =  \begin{bmatrix}w_1 & w_2 & \dots & w_d\end{bmatrix}^{T} \in \mathcal{R}^{d}$  
 
 Thông thường ta có thêm hệ số tự do là $w_0$ (thường được gọi là bias) để điều chỉnh thuật toán tốt hơn và fit với dữ liệu nhiều hơn, từ đó sinh ra cách kí hiệu mới như sau:  
 
 $\mathbf{\bar{x}} = \begin{bmatrix}1 & x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}$  
+
 $\mathbf{\bar{w}} =  \begin{bmatrix}w_0 & w_1 & w_2 & \dots & w_d\end{bmatrix}^{T}$  
 
 
