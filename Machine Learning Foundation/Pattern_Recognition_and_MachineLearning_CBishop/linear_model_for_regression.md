@@ -53,7 +53,8 @@ $$
 \mathcal{L}(\mathbf{w}) = \frac{1}{2N}\sum_{i = 1}^{N}(y_i - \mathbf{\bar{x}}_{i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\lVert y - \mathbf{\bar{X}}\mathbf{w} \right\rVert_2^{2}
 $$
 
-- Với 
+- Với   
+
 $$
 \mathbf{y} = \begin{bmatrix}y_1 & y_2 & \dots & y_N\end{bmatrix}^{T}
 $$     
