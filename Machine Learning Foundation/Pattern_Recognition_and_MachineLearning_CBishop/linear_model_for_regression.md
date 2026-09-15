@@ -128,7 +128,7 @@ Bài toán được đưa ra ở (3.1) là một phương pháp sử dụng basi
 
 Hạn chế đầu tiên của Linear Regression là nó rất **nhạy cảm với nhiễu** (sensitive to noise). Trong ví dụ về mối quan hệ giữa chiều cao và cân nặng bên trên, nếu có chỉ một cặp dữ liệu *nhiễu* (150 cm, 90kg) thì kết quả sẽ sai khác đi rất nhiều. Xem hình dưới đây:
 
-![11](assets/11.png)
+![1](assets/1.png)
 
 Vì vậy, trước khi thực hiện Linear Regression, các nhiễu (*outlier*) cần phải được loại bỏ. Bước này được gọi là tiền xử lý (pre-processing).
 
@@ -201,8 +201,8 @@ $$
 
 where $\Phi$ is defined
 
-![12](assets/12.png)
-![13](assets/13.png)
+![2](assets/2.png)
+![3](assets/3.png)
 Rõ ràng:
 
 - Ban đầu ta assume rằng noise $\varepsilon \sim \mathcal{N}(0, \beta^{-1})$, do vậy ta còn một tham số cần ước lượng nữa đó là $\beta$ và được tính bằng công thức (3.21) (Chứng minh công thức ở dưới).
