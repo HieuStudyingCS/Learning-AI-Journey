@@ -29,7 +29,7 @@ $$
 
 Trong đó,
 
-- $$\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$$ .    
+$$\mathbf{x} = \begin{bmatrix}x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}\in \mathcal{R}^{d}$$ .    
 
 $x_i$ là đặc trưng thứ $i$.  
 
