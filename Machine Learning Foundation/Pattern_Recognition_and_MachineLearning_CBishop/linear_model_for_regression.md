@@ -37,9 +37,9 @@ $$\mathbf{w} =  \begin{bmatrix}w_1 & w_2 & \dots & w_d\end{bmatrix}^{T} \in \mat
 
 Thông thường ta có thêm hệ số tự do là $w_0$ (thường được gọi là bias) để điều chỉnh thuật toán tốt hơn và fit với dữ liệu nhiều hơn, từ đó sinh ra cách kí hiệu mới như sau:  
 
-$\mathbf{\bar{x}} = \begin{bmatrix}1 & x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}$  
+$$\mathbf{\bar{x}} = \begin{bmatrix}1 & x_1 & x_2 & \dots & x_d\end{bmatrix} ^{T}$$      
 
-$\mathbf{\bar{w}} =  \begin{bmatrix}w_0 & w_1 & w_2 & \dots & w_d\end{bmatrix}^{T}$  
+$$\mathbf{\bar{w}} =  \begin{bmatrix}w_0 & w_1 & w_2 & \dots & w_d\end{bmatrix}^{T}$$      
 
 
 Việc thêm một đặc trưng mới với  dữ liệu cố định = 1 trong vector đặc trưng $\mathbf{x}$ có ý nghĩa tối ưu lớn (sẽ tìm hiểu sau) 
@@ -53,7 +53,7 @@ $$
 \mathcal{L}(\mathbf{w}) = \frac{1}{2N}\sum_{i = 1}^{N}(y_i - \mathbf{\bar{x}}_{i}^{T}\mathbf{w})^{2} = \frac{1}{2N} \left\lVert y - \mathbf{\bar{X}}\mathbf{w} \right\rVert_2^{2}
 $$
 
-- Với $\mathbf{y} = \begin{bmatrix}y_1 & y_2 & \dots & y_N\end{bmatrix}^{T}$ , $\mathbf{\bar{X}} = \begin{bmatrix}\mathbf{\bar{x_1}^{T}} \\ \mathbf{\bar{x_2}}^{T} \\\dots\\ \mathbf{\bar{x_N}}^{T}\end{bmatrix}$.
+- Với $$\mathbf{y} = \begin{bmatrix}y_1 & y_2 & \dots & y_N\end{bmatrix}^{T}$$ , $\mathbf{\bar{X}} = \begin{bmatrix}\mathbf{\bar{x_1}^{T}} \\ \mathbf{\bar{x_2}}^{T} \\\dots\\ \mathbf{\bar{x_N}}^{T}\end{bmatrix}$.
 - Rõ ràng, sai số càng nhỏ thì chứng tỏ model hoạt động càng tốt, vậy loss function cần phải càng nhỏ càng tốt → Tối thiểu hóa Loss function $\mathcal{L}$.
 
 $$
