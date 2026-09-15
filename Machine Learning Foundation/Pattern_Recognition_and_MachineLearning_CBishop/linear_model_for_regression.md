@@ -58,13 +58,13 @@ $$
 - Lấy gradient của $\mathcal{L}$, ta có:
 
 $$
-\frac{\nabla{\mathcal{L}(\mathbf{w})}}{\nabla{\mathbf{w}}} = \frac{1}{N} \mathbf{\bar{X}}^{T}(\mathbf{\bar{X}}\mathbf{w} - \mathbf{y}) = 0 \Leftrightarrow \mathbf{w} = (\mathbf{\bar{X}}^{T}\mathbf{\bar{X}})^{-1}\mathbf{\bar{X}}^{T}\mathbf{y} \tag{1}
+\frac{\nabla{\mathcal{L}(\mathbf{w})}}{\nabla{\mathbf{w}}} = \frac{1}{N} \mathbf{\bar{X}}^{T}(\mathbf{\bar{X}}\mathbf{w} - \mathbf{y}) = 0 \Leftrightarrow \mathbf{w} = (\mathbf{\bar{X}}^{T}\mathbf{\bar{X}})^{-1}\mathbf{\bar{X}}^{T}\mathbf{y} \qquad (1)
 $$
 
 Tuy nhiên, không phải lúc nào tích $\mathbf{\bar{X}}^{T}\mathbf{\bar{X}}$ cũng khả nghịch, vì vậy ta viết lại một cách tổng quát hơn cho công thức  (1) thông qua giả nghịch đảo như sau:
 
 $$
-\mathbf{w} = (\mathbf{\bar{X}}^{T}\mathbf{\bar{X}})^{\dag}\mathbf{\bar{X}}^{T}\mathbf{y} \tag{2}
+\mathbf{w} = (\mathbf{\bar{X}}^{T}\mathbf{\bar{X}})^{\dagger}\mathbf{\bar{X}}^{T}\mathbf{y} \qquad (2)
 $$
 
 Lưu ý:
@@ -97,7 +97,7 @@ là một hàm tuyến tính theo $\mathbf{w}$ và vì vậy cũng có thể đ�
 - Đôi khi trong nhiều giáo trình, ta sử dụng phương pháp kí hiệu khác để nói rằng nhiều bài toán  có thể giải bằng Linear Regression bằng cách đưa tính phi tuyến vào dữ liệu đầu vào, từ đó giúp mô hình fit với dữ liệu hơn, đó là kí hiệu của **Basis Function** ($\phi{(\mathbf{x}})$) như sau:
 
 $$
-y \approx \hat{y} = y(\mathbf{x}, \mathbf{w}) = w_0 + \sum_{j = 1}^{M - 1}w_j\phi_j(\mathbf{x}) \tag{3.1.1}
+y \approx \hat{y} = y(\mathbf{x}, \mathbf{w}) = w_0 + \sum_{j = 1}^{M - 1}w_j\phi_j(\mathbf{x}) \qquad(3.1.1)
 $$
 
 Trong đó, $\phi{\mathbf{(x)}}$ là basis function. Ta định nghĩa thêm một hàm cơ sở giả (dummy basis function) là $\phi_0{\mathbf{(x)}} = 1$ để tối ưu hóa biểu diễn toán học. Theo đó, công thức (3.1.1) được viết lại như sau:
@@ -196,7 +196,7 @@ $$
 Solving $\mathbf{w}$ (normal equation)
 
 $$
-\mathbf{w}_{ML} = (\Phi^{T}\Phi)^{\dag}\Phi^{T}\mathbf{t}
+\mathbf{w}_{ML} = (\Phi^{T}\Phi)^{\dagger}\Phi^{T}\mathbf{t}
 $$
 
 where $\Phi$ is defined
@@ -209,27 +209,27 @@ Rõ ràng:
 - Ý nghĩa từ công thức: phương sai của nhiễu bằng đúng trung bình bình phương sai số (MSE) của tập huấn luyện sau khi đã tối ưu trọng số. Hay nói cách khác thì phương sai của nhiễu đúng bằng trung bình bình phương phần dư (residual) theo góc nhìn giải tích, nhưng nhìn theo góc nhìn thống kê sẽ thấy nó chính là sample variance của $\varepsilon$. Giải thích:
     - Rất dễ thấy rằng $t = y(\mathbf{x}, \mathbf{w})   + \varepsilon$ là một random variable, và do vậy tương ứng với mỗi $t$ ta có một phần noise mà ta assume phân phối như sau:
         
-        $$
-        \varepsilon \sim \mathcal{N}(0, \beta^{-1})
-        $$
+$$
+\varepsilon \sim \mathcal{N}(0, \beta^{-1})
+$$
         
     - Dẫn đến với $N$ giá trị đích $t$ ta có tới $N$ noise là $\varepsilon_1, \dots, \varepsilon_N$ đều i.i.d (independent identically distribution) vì các dữ liệu trong tập dữ liệu ban đầu được thu thập một cách độc lập.
     - Vì vậy ta thấy:
         
-        $$
-        Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
-        $$
+$$
+Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
+$$
         
         - Dấu bằng cuối cùng chỉ xảy ra theo luật số lớn khi số lượng quan sát được $N$ càng lớn. Vì vậy trung bình của $\varepsilon_i^{2}$ có thể được coi như là một giá trị thực nghiệm ước lượng $E[\varepsilon^{2}]$ (hay trong trường hợp này trung bình này cũng chính là phương sai/mức độ biến động của $\varepsilon$).
     - Mà ta lại có
         
-        $$
-        \varepsilon = t - y(\mathbf{x}, \mathbf{w})  
-        $$
+$$
+\varepsilon = t - y(\mathbf{x}, \mathbf{w})  
+$$
         
-        $$
-        \Rightarrow Var(\varepsilon) = E[\varepsilon^{2}] = E[(t - y(\mathbf{x}, \mathbf{w}))^{2}]
-        $$
+$$
+\Rightarrow Var(\varepsilon) = E[\varepsilon^{2}] = E[(t - y(\mathbf{x}, \mathbf{w}))^{2}]
+$$
         
 
 Vì vậy ta thấy kết luận cuối cùng của C.Bishop là hoàn toàn đúng ”we see that the inverse of the noise precision is given by the residual variance of the target values around the regression function”
