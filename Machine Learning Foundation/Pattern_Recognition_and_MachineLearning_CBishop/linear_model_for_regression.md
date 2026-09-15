@@ -209,16 +209,16 @@ Rõ ràng:
 - Ý nghĩa từ công thức: phương sai của nhiễu bằng đúng trung bình bình phương sai số (MSE) của tập huấn luyện sau khi đã tối ưu trọng số. Hay nói cách khác thì phương sai của nhiễu đúng bằng trung bình bình phương phần dư (residual) theo góc nhìn giải tích, nhưng nhìn theo góc nhìn thống kê sẽ thấy nó chính là sample variance của $\varepsilon$. Giải thích:
     - Rất dễ thấy rằng $t = y(\mathbf{x}, \mathbf{w})   + \varepsilon$ là một random variable, và do vậy tương ứng với mỗi $t$ ta có một phần noise mà ta assume phân phối như sau:
         
-$$
-\varepsilon \sim \mathcal{N}(0, \beta^{-1})
-$$
+    $$
+    \varepsilon \sim \mathcal{N}(0, \beta^{-1})
+    $$
         
     - Dẫn đến với $N$ giá trị đích $t$ ta có tới $N$ noise là $\varepsilon_1, \dots, \varepsilon_N$ đều i.i.d (independent identically distribution) vì các dữ liệu trong tập dữ liệu ban đầu được thu thập một cách độc lập.
     - Vì vậy ta thấy:
         
-$$
-Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
-$$
+    $$
+    Var(\varepsilon) = E[\varepsilon^{2}] - E[\varepsilon]^{2} = E[\varepsilon^{2}] \approx \frac{1}{N}(\sum_{i=1}^{N}\varepsilon_i^{2})
+    $$
         
         - Dấu bằng cuối cùng chỉ xảy ra theo luật số lớn khi số lượng quan sát được $N$ càng lớn. Vì vậy trung bình của $\varepsilon_i^{2}$ có thể được coi như là một giá trị thực nghiệm ước lượng $E[\varepsilon^{2}]$ (hay trong trường hợp này trung bình này cũng chính là phương sai/mức độ biến động của $\varepsilon$).
     - Mà ta lại có
@@ -271,7 +271,7 @@ Có thể thấy được $\hat{y}$ chính là một vector nằm trong column s
 Dễ thấy thì để $\mathbf{e}$ là nhỏ nhất thì vector sai số này phải vuông góc với hyperplane được tạo từ các cột của ma trận X. Nói cách khác thì
 
 $$
-X^Te = 0 \Leftrightarrow X^T(\mathbf{y} - X\mathbf{w}) = 0 \Leftrightarrow \mathbf{w} = (X^TX)^{\dag}X^Ty
+X^Te = 0 \Leftrightarrow X^T(\mathbf{y} - X\mathbf{w}) = 0 \Leftrightarrow \mathbf{w} = (X^TX)^{\dagger}X^Ty
 $$
 
 Vậy thì dù nhìn dưới góc độ nào thì ta cũng đều thu được một kết quả là Normal Equation.
