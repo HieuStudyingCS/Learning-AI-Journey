@@ -18,15 +18,6 @@ With strong interest in AI, I decided to create this repository to save all of n
 
 - Đây là cuốn sách thực sự hay, chi tiết về nền tảng toán học của Machine Learning. Rất khuyến khích các bạn đọc cuốn sách này nếu đã có nền tảng về toán cho Machine Learning.
 
-<details>
-    <summary>11 sections</summary>
-
-    | Sections | Contents |
-    |:-------:|:--------:|
-    | 7. Hồi Quy Tuyến Tính | Đây là một trong các thuật toán Machine Learning cơ bản nhất, sử dụng một đường thẳng để "sắp xỉ tốt" các điểm dữ liệu |
-    
-</details>
-
 ### Foundation of Machine Learning - Mehryar Mohri, Afshin Rostamizadeh, Ameet Talwalkar
 - Nguồn tham khảo chính cho bài viết về Hoeffding và PAC Learning Model.
 
